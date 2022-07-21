@@ -12,3 +12,9 @@ function click_me_event_count() {
     Cookies.set(`click_count`, true_count);
     
 }
+
+let to_display_page = document.getElementById(`to_display`);
+to_display_page.addEventListener(`click`, display_page);
+function display_page () {
+    location.href = "display.html"
+}
