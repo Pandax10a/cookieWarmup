@@ -4,9 +4,11 @@ let click_me_event = document.querySelector(`#click_1`);
 click_me_event.addEventListener(`click`, click_me_event_count);
 function click_me_event_count() {
     Cookies.get(`click_count`);
-    Cookies.set(`click_count`, +1);
+    // Cookies.set(`click_count`, +1);
 
-    // let true_count = Cookies.get(`click_count`);
-    // console.log(true_count);
+
+     let true_count = Number(Cookies.get(`click_count`)) + 1;
+    console.log(true_count);
+    Cookies.set(`click_count`, true_count);
     
 }
